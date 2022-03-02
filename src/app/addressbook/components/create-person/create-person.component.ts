@@ -15,9 +15,8 @@ import { PeopleStore } from '../../store/people.store';
 export class CreatePersonComponent  {
   
 createPersonSub: Subscription;
-  router: any;
 
-  constructor(private store: PeopleStore, private personService:Router) { }
+  constructor(private store: PeopleStore, private personService: PeopleService, private router: Router) { }
 
 
   onSubmit(submittedForm: { value: { lastname: any; firstname: any; phone: any; }; invalid: any; }) {
